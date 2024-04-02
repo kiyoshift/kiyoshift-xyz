@@ -7,10 +7,12 @@
         <div class="header">
           {% include header.html %}
         </div>
-        <div class="nine columns" style="z-index:100;">
+        <div class="main-content" style="z-index:100;">
           <div class="wrapper">
             {{ content }}
           </div>
+        <div class="sidebar" style="z-index:100;">
+            {% include sidebar.html %}
         </div>
       </div>
       {% include footer.html %} 
