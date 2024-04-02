@@ -1,29 +1,23 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
+---
 title: kiyoshift.xyz
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 email: kiyoshiturbitt@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: chrrsy 
+description: 'Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for Google search
+  results) and in your feed.xml site description.
 
-# Build settings
+'
+twitter_username: chrrsy
 markdown: kramdown
 kramdown:
   input: GFM
-permalink: /:categories/:title:output_ext
-
-# Third-party services
-# just leave someone empty to disable it
-# google_analytics: 
-disqus_shortname:
-
-# used this for post_excerpt at index_page
-excerpt_separator: <!--description-->
+permalink: "/:categories/:title:output_ext"
+disqus_shortname: 
+excerpt_separator: "<!--description-->"
