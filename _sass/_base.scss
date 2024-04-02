@@ -28,7 +28,7 @@
 */
 
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: calc($spacing-unit / 2);
 }
 
 .box {
@@ -40,13 +40,7 @@
 .container {
   position:relative;
   width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 10px 10px;
-  box-sizing: border-box;
   /* for test only */
-  border: 1px dashed #eeeeee;
-
 }
 .column,
 .columns {
@@ -57,14 +51,13 @@
 /* For devices larger than 400px */
 @media (min-width: 401px) {
   .container {
-    width: 100%;
-    padding: 64px 32px; }
+    width: 100%; }
 }
 
 /* For devices larger than 780px */
 @media (min-width: 781px) {
   .container {
-    width: 90%; }
+  }
   .column,
   .columns {
     margin-right: 4%; }
@@ -141,7 +134,9 @@ body {
   /* font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif; */
   /* font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-family: -apple-system-font,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
-  color: #222; }
+  color: $text-color; 
+  background-color: $background-color;
+  }
 
 
 /* Typography
@@ -174,14 +169,13 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #222;
+  color: $text-color;
   text-decoration: none;
   //background-color: transparent;
   -webkit-transition: color .4s;
   transition: color .4s;
 }
 a:hover {
-  color: #b1b1b1;
   text-decoration: underline;
 }
 
