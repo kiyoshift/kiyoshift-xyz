@@ -2,18 +2,10 @@
 title: Archive
 layout: default
 ---
-
 <div>
-
   <h2>Archive</h2>
 
-  <section class="archive_list">
-    {% for category in site.categories %}
-
-    <div class="category-name">
-      <h2>{{ category | first }}</h2>
-    </div>
-    {% for post in category.last %}
+    {% for post in site.posts %}
 
     <div class="post_title">
       <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title}}</a>
@@ -22,12 +14,9 @@ layout: default
 
     {% endfor %}
 
-    {% endfor %}
-
   </section>
 
-  <footer class="article-footer" mar>
-    {% include author.html %}
+  <footer class="article-footer" style="display:none">
   </footer>
 </div>
 
