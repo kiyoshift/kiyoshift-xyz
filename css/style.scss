@@ -1,0 +1,152 @@
+---
+---
+
+body {
+  margin: 0px;
+}
+
+$main-font:               "Arial";
+$secondary-font:          "IBM Plex Sans";
+$font-size:               15px;
+$text-color:           #FFF;
+$void-color:           #121212;
+$background-color:     #262626;
+$content-side-margins:   18%;
+
+/*=================
+  Default 
+=================*/
+
+body {
+  background-color: $void-color;
+  color: $text-color;
+  font-family: $main-font;
+}
+
+.wrapper {
+  background-color: $background-color;
+}
+
+// Text format
+
+p {  font-size: $font-size; }
+h2 {  font-size: $font-size + 4px }
+a:link, a:visited { color: #c9718f; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+// Header
+
+.site-header {
+  padding-left: $content-side-margins;
+  padding-top: 7px;
+  background-image: linear-gradient(0deg, #ca3d7f70, #3a3a3a), url(/./assets/img/net.gif);
+  background-blend-mode: multiply;
+  margin-bottom: 10px;
+  border-bottom: 2px black solid; 
+}
+
+.logo {
+  display: block;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  font-size: 3.5em;
+  margin: 0px;
+  margin-bottom: 5px;
+  text-shadow: 10px 8px 6px black;
+  > a {
+    color: #ffe9c8;
+    text-decoration: none;
+  }
+}
+
+.nav {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  >a {
+    font-family: $secondary-font;
+    color: blanchedalmond;
+    text-shadow: 2px 1px 3px black;
+    padding-right: 10px;
+    font-size: 20px;
+  }
+}
+
+// Sidebar
+
+.content {
+  padding-left: $content-side-margins;
+  padding-right: $content-side-margins;
+  display: flex;
+}
+
+.main-content {
+  flex: 0.8;
+}
+
+.sidebar {
+  font-family: $secondary-font;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  flex: 0.2;
+  padding: 10px;
+  margin-left: 35px;
+  justify-content: center;
+  text-align: center;
+}
+
+// Footer
+
+footer.site-footer {
+  padding-top: 20px;
+  background-image: linear-gradient(0deg, $void-color, transparent);
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 25px;
+  font-family: $secondary-font;
+}
+
+/*=================
+  Home 
+=================*/
+
+// Post excerpts
+
+.post-header h2 {
+  color: $text-color;
+  text-decoration-thickness: 1px;
+  margin-bottom: 0px;
+  font-weight: 500;
+  font-family: $secondary-font;
+}
+.post-header time {
+  font-weight: normal;
+  padding-left: 10px;
+  font-size: 12px;
+  opacity: 50%;
+}
+
+
+.read-more {
+  display: inline;
+  text-decoration: none;
+}
+
+  // display .read-more inline & with proper paragraph margins
+
+  .post-excerpt:has(>.readmore)>:nth-last-child(2):first-child {
+    display: inline-block;
+    margin-bottom: 0px;
+  }
+
+  .post-excerpt:has(>.readmore)>:last-child {
+    display: inline;
+  }
+
+  .post-excerpt:has(>.readmore)>:nth-last-child(2) {
+    display: inline;
+  }
+
+  .post-excerpt:has(>.readmore)>:only-child {
+    display: inline-block;
+  }
